@@ -33,12 +33,16 @@ namespace Assets.Scripts.Components
 				GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
 				collectedLoot.Remove (turnOn);
 				turnOn.SetActive (true);
+				if (CurStuff - pointValue <= 0.0f) {
+					Death ();
+				}
 				CurStuff -= pointValue;
 			}
 
 		}
 
 		public void Death(){
+			Application.LoadLevel (0);
 			Debug.Log ("death things");
 		}
 
