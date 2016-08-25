@@ -33,9 +33,11 @@ namespace Assets.Scripts.Components
 				GameObject turnOn = collectedLoot [Random.Range (0, collectedLoot.Count)];
 				collectedLoot.Remove (turnOn);
 				turnOn.SetActive (true);
+				//What mike did start
 				if (CurStuff - pointValue <= 0.0f) {
 					Death ();
 				}
+				//What Mike did finish
 				CurStuff -= pointValue;
 			}
 
